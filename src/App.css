@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Poppins", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main__container {
+  background-color: #00082f;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: aliceblue;
+}
+.todos h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.icon__holder {
+  width: 40px;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+/* // Todo holder CSS // */
+.todo__input__box {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 45px;
+}
+.todo__input,
+.todo__select {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  height: 100%;
+  font-size: 18px;
+  color: #333;
+}
+.todo__input {
+  flex-grow: 1;
+  padding: 0px 10px;
+}
+.todo__select {
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo__sub__btn {
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  padding: 0px 10px;
+  cursor: pointer;
+  height: 45px;
+}
+
+/* // todo list box // */
+.todo_box {
+  display: flex;
+  background: white;
+  margin: 10px 0px;
+  align-items: center;
+  color: #333;
+  font-size: 18px;
+}
+.check__box {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo_box:hover .todo__remove__btn svg {
+  display: block;
+}
+.todo_box h3 {
+  font-size: 20px;
+  padding-left: 5px;
+  flex: 0.7;
+  padding: 10px;
+}
+.todo_box p {
+  font-size: 18px;
+  flex: 0.1;
+}
+.todo__remove__btn {
+  flex: 0.1;
+  color: #333;
+  height: 45px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin: 0px 10px;
+  align-items: center;
+  justify-self: center;
+  position: relative;
+}
+.todo__remove__btn svg {
+  width: 35px;
+  margin: auto;
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  top: 5%;
+  left: 32%;
+  display: none;
+}
+.text__throw {
+  text-decoration: line-through;
+}
+.text__normal {
+  text-decoration: none;
 }
