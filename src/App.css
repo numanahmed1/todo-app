@@ -7,7 +7,7 @@ body {
 }
 .main__container {
   background-color: #00082f;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -15,6 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   color: aliceblue;
+  padding: 10px;
 }
 .todos h2 {
   font-size: 30px;
@@ -114,4 +115,30 @@ body {
 }
 .text__normal {
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .todo__input__box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: transparent;
+  }
+  .todo__input {
+    padding: 10px 10px;
+    margin: 10px 0px;
+    background: white;
+  }
+  .todo__select {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .todo__sub__btn {
+    width: 70px;
+    padding: 0px 15px;
+    background: white;
+    margin: auto;
+  }
 }
